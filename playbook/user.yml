@@ -1,0 +1,10 @@
+name: create user
+hosts: test.com
+tasks:
+   - name: create admin user
+     user:
+        name: myuser
+    password: "{{ 'UserPass' }}"
+        uid: 1
+        shell: /bin/bash
+        append: yes

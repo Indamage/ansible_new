@@ -1,0 +1,13 @@
+tasks:
+  - name: iptables_allow
+    chain: INPUT
+    jump: ACCEPT
+    destination_port: 9100
+    source: 123.145.167.254
+  
+  - name: ssh_allow
+    chain: INPUT
+    jump: ACCEPT
+    destination_port: 37656
+    source: all
+    protocol: ssh
